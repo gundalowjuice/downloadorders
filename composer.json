@@ -1,0 +1,16 @@
+{
+	"name": "/downloadorders",
+	"description": "Get orders",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Kevin Douglass",
+			"homepage": "http://kevindouglass.io"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0",
+		"phpoffice/phpexcel": "dev-master"
+	}
+}
+

@@ -1,0 +1,58 @@
+{#
+/**
+ * test plugin for Craft CMS
+ *
+ * test Settings.twig
+ *
+ * @author    kevin douglass
+ * @copyright Copyright (c) 2016 
+ * @link      #
+ * @package   FedExShipper
+ * @since     1
+ */
+#}
+
+
+{% import "_includes/forms" as forms %}
+
+{# {% includeCssResource "fedexshipper/css/FedExShipper_Style.css" %} #}
+{# {% includeJsResource "fedexshipper/js/FedExShipper_Script.js" %} #}
+
+
+<h2>Please select the tables you would like to add to the CSV file.</h2>
+
+
+{{ forms.selectField({
+    label: 'downloadordertables',
+    id: 'downloadordertables',
+    name: 'downloadordertables',
+    options: [
+        { 'label': 'Billing Address', 'value': 'billingAddressId' },
+        { 'label': 'Shipping Address', 'value': 'shippingAddressId' },
+        { 'label': 'Payment Method', 'value': 'paymentMethodId' },
+        { 'label': 'Customer ID', 'value': 'customerId' },
+        { 'label': 'Order Status', 'value': 'orderStatusId' },
+        { 'label': 'Number', 'value': 'number' },
+        { 'label': 'Coupon Code', 'value': 'couponCode' },
+        { 'label': 'Item Total', 'value': 'itemTotal' },
+        { 'label': 'Base Discount', 'value': 'baseDiscount' },
+        { 'label': 'Base Shipping Cost', 'value': 'baseShippingCost' },
+        { 'label': 'Total Price', 'value': 'totalPrice' },
+        { 'label': 'Total Paid', 'value': 'totalPaid' },
+        { 'label': 'Email', 'value': 'email' },
+        { 'label': 'Date Ordered', 'value': 'dateOrdered' },
+        { 'label': 'Date Paid', 'value': 'datePaid' },
+        { 'label': 'Message', 'value': 'message' },
+        { 'label': 'Return Url', 'value': 'returnUrl' },
+        { 'label': 'Cancel url', 'value': 'cancelUrl' },
+        { 'label': 'Shipping Method', 'value': 'shippingMethod' },
+        { 'label': 'Date Created', 'value': 'dateCreated' },
+        { 'label': 'Date Updated', 'value': 'dateUpdated' },
+        { 'label': 'UID', 'value': 'uid' },
+        { 'label': 'QTY', 'value': 'qty' },
+        { 'label': 'SKU', 'value': 'sku' },
+        { 'label': 'First Name', 'value': 'firstName' },
+        { 'label': 'Last Name', 'value': 'lastName' }
+    ],
+    value: settings['downloadordertables']})
+}}
